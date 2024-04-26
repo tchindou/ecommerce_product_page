@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" class=" overflow-x-hidden lg:w-[80%] lg:mx-auto">
+
+<head>
+	<meta charset="UTF-8">
+
+	<!-- displays site properly based on user's device -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--favicon-->
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+	<title>Frontend Mentor | E-commerce product page</title>
+
+	<!--stylsheet-->
+	<link href="./css/output.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+	<!--font-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+	<!--script-->
+	<script src="js/jquery.js"></script>
+	<script src="js/app.js"></script>
+
+</head>
+
+<body class="flex flex-col overflow-y-auto  overflow-x-hidden">
+
+	<nav class="bg-white text-black border-b border-gray-300 h-16">
+		<!--Code de la barre de navigation-->
+		<div class="flex flex-wrap h-full content-center justify-between mx-auto">
+
+			<div class="flex h-full content-center items-center">
+				<!--Bouton du drawer (seulement pour petit ecran)-->
+				<button class="lg:hidden" type="button" data-drawer-target="drawer-example"
+					data-drawer-show="drawer-example" data-drawer-placement="left"
+					aria-controls="drawer-example">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+						stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+						<path stroke-linecap="round" stroke-linejoin="round"
+							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					</svg>
+				</button>
+
+				<!--Nom du site-->
+				<a href="#" class="flex items-center space-x-3">
+					
+					<span class="self-center text-2xl font-bold whitespace-nowrap">sneackers</span>
+				</a>
+
+				<!--Code pour le drawer-->
+				<div id="drawer-example"
+					class="lg:flex fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80 dark:bg-gray-800"
+					tabindex="-1" aria-labelledby="drawer-label">
+
+					<!--Nom du site-->
+					<span class="self-center text-2xl font-bold whitespace-nowrap">sneackers</span>
+
+					<!--Bouton pour fermer le drawer-->
+					<button type="button" data-drawer-hide="drawer-example"
+						aria-controls="drawer-example"
+						class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+						<svg class="w-3 h-3" aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg" fill="none"
+							viewBox="0 0 14 14">
+							<path stroke="currentColor" stroke-linecap="round"
+								stroke-linejoin="round" stroke-width="2"
+								d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+						</svg>
+						<span class="sr-only">Close menu</span>
+					</button>
+
+					<!--Menu du drawer-->
+					<ul class="items-start content-start w-full p-5">
+						<li class="h-full">
+							<a href="#"
+								class="inline-block content-center my-2 h-full hover:text-gray-600 border-b-0 hover:border-b-4 hover:border-gray-500"
+								aria-current="page">Home</a>
+						</li>
+						<li class="h-full">
+							<a href="#"
+								class="inline-block content-center my-2 text-orange-500 border-b-4 hover:border-b-4 border-orange-500 hover:text-gray-600 hover:border-gray-500 active"
+								aria-current="page">Collections</a>
+						</li>
+						<li class="h-full">
+							<a href="#" class="inline-block content-center my-2"
+								aria-current="page">Men</a>
+						</li>
+						<li class="h-full">
+							<a href="#" class="inline-block content-center my-2"
+								aria-current="page">Women</a>
+						</li>
+						<li class="h-full">
+							<a href="#" class="inline-block content-center my-2"
+								aria-current="page">About</a>
+						</li>
+						<li class="h-full">
+							<a href="#" class="inline-block content-center my-2"
+								aria-current="page">Contact</a>
+						</li>
+					</ul>
+
+				</div>
+
+				<!--Menu du navbar pour grande taille (tablette et plus)-->
+				<ul class="hidden lg:flex flex-wrap h-full items-center ml-5">
+					<li class="h-full">
+						<a href="#"
+							class="inline-block content-center mx-3 h-full hover:text-gray-600 border-b-0 hover:border-b-4 hover:border-gray-500"
+							aria-current="page">Home</a>
+					</li>
+					<li class="h-full">
+						<a href="#"
+							class="inline-block content-center mx-3 h-full text-orange-500 border-b-4 hover:border-b-4 border-orange-500 hover:text-gray-600 hover:border-gray-500 active"
+							aria-current="page">Collections</a>
+					</li>
+					<li class="h-full">
+						<a href="#"
+							class="inline-block content-center mx-3 h-full hover:text-gray-600 border-b-0 hover:border-b-4 hover:border-gray-500"
+							aria-current="page">Men</a>
+					</li>
+					<li class="h-full">
+						<a href="#"
+							class="inline-block content-center mx-3 h-full hover:text-gray-600 border-b-0 hover:border-b-4 hover:border-gray-500"
+							aria-current="page">Women</a>
+					</li>
+					<li class="h-full">
+						<a href="#"
+							class="inline-block content-center mx-3 h-full hover:text-gray-600 border-b-0 hover:border-b-4 hover:border-gray-500"
+							aria-current="page">About</a>
+					</li>
+					<li class="h-full">
+						<a href="#"
+							class="inline-block content-center mx-3 h-full hover:text-gray-600 border-b-0 hover:border-b-4 hover:border-gray-500"
+							aria-current="page">Contact</a>
+					</li>
+				</ul>
+
+			</div>
+
+			<!--Profile + panier-->
+			<div class="flex h-full items-center">
+
+				<div class="flex h-full items-center">
+					<button id="dropdownNotificationButton"
+						data-dropdown-toggle="dropdownNotification"
+						class="relative w-fit h-fit inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400"
+						type="button">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+							stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+						</svg>
+
+
+						<div
+							class="absolute block w-5 h-5 text-white font-semibold text-xs bg-orange-500 border-2 border-white rounded-full -top-3 start-4 dark:border-gray-900 badge qte">
+							3
+						</div>
+					</button>
+
+					<!-- Dropdown menu -->
+					<div id="dropdownNotification"
+						class="z-40 hidden min-h-[175px] min-w-[287px] flex-col w-fit bg-white divide-y divide-gray-100 rounded-lg shadow-md mx-10 dark:bg-gray-800 dark:divide-gray-700"
+						aria-labelledby="dropdownNotificationButton">
+						<div
+							class="block px-4 py-2 font-medium text-gray-700 border-b border-gray-350">
+							Cart
+						</div>
+						<div class="dark:divide-gray-700 cartContent">
+							<div
+								class="text-gray-600 text-sm h-fit items-center flex flex-row p-4">
+								<div>
+									<img class="w-10 h-10 rounded-md"
+										src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+										alt="image description">
+								</div>
+								<div class="mx-2">
+									<p>Fall Limited Edition Sneakers</p>
+									<p>$125.00 x <span id="itemQte"></span> <span id="itemPrice"
+											class="font-bold">$375.00</span>
+									</p>
+								</div>
+								<div id="removeCart">
+									<svg xmlns="http://www.w3.org/2000/svg"
+										fill="none" viewBox="0 0 24 24"
+										stroke-width="1.5" stroke="currentColor"
+										class="w-6 h-6">
+										<path stroke-linecap="round"
+											stroke-linejoin="round"
+											d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+									</svg>
+
+								</div>
+							</div>
+							<div class="mx-4">
+								<button
+									class="w-full my-3 bg-orange-500 text-white rounded-md px-4 py-2" id="checkout">Checkout</button>
+
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="w-10 h-10 mx-8 rounded-full border-0 hover:border-2 border-orange-500">
+						<img src="./images/image-avatar.png" alt="">
+					</div>
+
+				</div>
+
+
+			</div>
+
+	</nav>
+
+
+	<!--Contneu principale contenant le images du produits et tout s'y rapportant-->
+	<div class="h-[calc(100vh-80px)] md:content-center">
+
+		<div class="flex flex-col md:flex-row lg:h-[90%] lg:w-[82%] m-auto md:p-5 md:justify-between md:items-center">
+
+			<div class="w-screen md:w-fit md:max-w-[48%]">
+
+				<!--Div contenant l'image pour les petits ecrans-->
+				<div  id="controls-carousel" class="md:hidden w-screen max-w-screen relative" data-carousel="static">
+					<div class="relative w-screen h-60">
+						<div class="hidden duration-700 ease-in-out" data-carousel-item>
+							<img class="md:rounded-xl w-screen object-right object-cover h-full absolute block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="./images/image-product-1.jpg" alt="">
+						</div>
+						<div class="hidden duration-700 ease-in-out" data-carousel-item>
+							<img class="md:rounded-xl w-full object-right object-cover h-full absolute block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+								src="./images/image-product-1.jpg" alt="">
+						</div>
+					</div>
+					<!-- Slider controls -->
+					<button type="button"
+						class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-2 cursor-pointer group focus:outline-none"
+						data-carousel-prev>
+						<span
+							class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+							<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+									d="M5 1 1 5l4 4" />
+							</svg>
+							<span class="sr-only">Previous</span>
+						</span>
+					</button>
+					<button type="button"
+						class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-2 cursor-pointer group focus:outline-none"
+						data-carousel-next>
+						<span
+							class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+							<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+									d="m1 9 4-4-4-4" />
+							</svg>
+							<span class="sr-only">Next</span>
+						</span>
+					</button>
+				</div>
+
+				<!--Div des images pour les grands ecran-->
+				<div class="hidden md:block md:container w-full h-60 md:h-80 md:w-80 md:rounded-xl">
+					<img class="md:rounded-xl w-full object-right object-cover h-full image-view" src="./images/image-product-1.jpg" alt="">
+				</div>
+				<div class="items hidden md:flex justify-between mt-5">
+					<li class="image-item active">
+						<div
+							class="item-div relative w-16 h-16 hover:border-orange-500 hover:border-2 border-orange-500 border-2 rounded-lg">
+							<img class="rounded-lg"
+								src="./images/image-product-1-thumbnail.jpg" alt="">
+
+							<div
+								class="absolute bottom-0 left-0 right-0 top-0 h-full w-full rounded-lg overflow-hidden bg-slate-100 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-30">
+							</div>
+						</div>
+					</li>
+					<li class="image-item">
+						<div class="item-div relative w-16 h-16 hover:border-orange-500 hover:border-2 border-0 rounded-lg">
+							<img class="rounded-lg" src="./images/image-product-2-thumbnail.jpg" alt="">
+						
+							<div
+								class="absolute bottom-0 left-0 right-0 top-0 h-full w-full rounded-lg overflow-hidden bg-slate-100 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-30">
+							</div>
+						</div>
+					</li>
+					<li class="image-item">
+						<div class="item-div relative w-16 h-16 hover:border-orange-500 hover:border-2 border-0 rounded-lg">
+							<img class="rounded-lg" src="./images/image-product-3-thumbnail.jpg" alt="">
+						
+							<div
+								class="absolute bottom-0 left-0 right-0 top-0 h-full w-full rounded-lg overflow-hidden bg-slate-100 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-30">
+							</div>
+						</div>
+					</li>
+					<li class="image-item">
+						<div class="item-div relative w-16 h-16 hover:border-orange-500 hover:border-2 border-0 rounded-lg">
+							<img class="rounded-lg" src="./images/image-product-4-thumbnail.jpg" alt="">
+						
+							<div
+								class="absolute bottom-0 left-0 right-0 top-0 h-full w-full rounded-lg overflow-hidden bg-slate-100 bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-30">
+							</div>
+						</div>
+					</li>
+				</div>
+			</div>
+
+			<!--Div pour la description et l'ajout au panier-->
+			<div class="w-screen md:w-fit md:max-w-[48%] h-fit p-5">
+				<p class="text-orange-500 font-semibold my-1">Sneaker Company</p>
+				<h1 class="text-3xl font-bold">Fall Limited Edition Sneakers</h1>
+				<p class="text-slate-400 my-3">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+				<h2 class="text-xl font-bold">$125.00 <span class="bg-orange-200 text-orange-500 text-lg">50%</span></h2>
+				<p class="text-slate-400 line-through">$250.00</p>
+
+				<div class="flex flex-col md:flex-row h-fit w-full mt-5">
+					<div class="flex flex-1 h-full shadow shadow-slate-200 rounded-md mb-3 md:mb-0 md:mr-5 justify-between items-center">
+						<button id="minus">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+								class="w-4 h-4 m-3">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+							</svg>
+						
+						
+						</button>
+						
+						<p class="text-xl font-bold" id="quantity">0</p>
+						
+						<button id="plus">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+								class="w-4 h-4 m-3">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+							</svg>
+						</button>
+					</div>
+
+					<div class="w-full md:w-[60%]">
+						<button class="bg-orange-500 text-white rounded-lg w-full py-2 flex justify-center" id="addToCart">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
+								class="w-6 h-6 mr-5">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+							</svg>
+
+							Add to cart
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="node_modules/flowbite/dist/flowbite.min.js"></script>
+</body>
+
+</html>
+
+<!--
+  
+  Collections
+  Men
+  Women
+  About
+  Contact
+
+  Sneaker Company
+
+  Fall Limited Edition Sneakers
+
+  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+  $125.00
+  50%
+  $250.00
+
+  0
+  Add to cart
+-->
