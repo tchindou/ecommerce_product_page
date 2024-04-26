@@ -35,5 +35,3 @@ Pour ce projet nous avons eu besoin de :
 <p>
 <a href="https://linkedin.com/in/ptchindou" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="ptchindou" height="30" width="40" /></a>
 </p>
-
-<img src="https://widgetbite.com/stats/tchindou" alt="watching_count" /> <img src="https://komarev.com/ghpvc/?username=tchindou" alt="tchindou">
