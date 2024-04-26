@@ -32,23 +32,23 @@ $(document).ready(function () {
       if (quantity > 0) {
         $("#quantity").text(quantity - 1);
         $(".qte").text(quantity - 1);
+      updateItemPrice(quantity - 1);
         if (quantity - 1 === 0) {
           $(".badge").hide();
           $(".cartContent").children().hide(); // Rendre invisibles les éléments enfants de cartContent lorsque la quantité atteint 0
           $("#emptyCartMessage").show(); // Afficher le message indiquant que le panier est vide
         }
       }
-      updateItemPrice(quantity - 1);
     });
 
     $("#plus").click(function () {
       var quantity = parseInt($("#quantity").text());
-      if (quantity < 10) {
+      if (quantity < 16) {
         $("#quantity").text(quantity + 1);
         $(".qte").text(quantity + 1);
+      updateItemPrice(quantity + 1);
         $("#emptyCartMessage").hide(); // Cacher le message indiquant que le panier est vide lorsque la quantité est supérieure à 0
       }
-      updateItemPrice(quantity + 1);
     });
 
     // Gestion de l'ajout au panier
